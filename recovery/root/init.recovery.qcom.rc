@@ -64,9 +64,9 @@ on boot
     setprop sys.usb.config adb
 
     # Double tap to wake
-    chown system system /sys/kernel/touchpanel/dclicknode
-    chmod 0644 /sys/kernel/touchpanel/dclicknode
-    write /sys/kernel/touchpanel/dclicknode 1
+    chown system system /proc/tpd_gesture
+    chmod 0644 /proc/tpd_gesture
+    write /proc/tpd_gesture 1
 
 # Set ASUS-specific SKU and version
 # Apparently they need to be set late at boot; weird flex but OK

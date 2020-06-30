@@ -104,3 +104,17 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INCLUDE_NTFS_3G := true
 TW_NO_EXFAT_FUSE := true
 TW_EXCLUDE_TWRPAPP := true
+
+TARGET_RECOVERY_DEVICE_MODULES += \
+    android.hidl.base@1.0 \
+    android.hidl.token@1.0 \
+    libicuuc \
+    libion \
+    libxml2
+
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += \
+    $(TARGET_OUT)/lib64/android.hidl.base@1.0.so \
+    $(TARGET_OUT)/lib64/android.hidl.token@1.0.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so

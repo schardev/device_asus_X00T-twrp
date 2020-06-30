@@ -42,3 +42,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.CID=CID_ERROR \
     ro.hq.project=ZQL1650
+
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
+    ro.bootimage.build.date.utc \
+    ro.product.device \
+    ro.build.date.utc
